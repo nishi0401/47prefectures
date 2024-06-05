@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  resources :records, only: [:index]
+  devise_for :users
+  resources :records
+  resources :users, only: [:show]
   root to: "records#index"
 end

@@ -1,0 +1,9 @@
+  <%= "#{@user.nickname}さんの制覇率は#{@achievement_rate}%です" %>
+
+<div class="records">
+  <div>旅の思い出</div>
+  <% @records.each do |record| %>
+    <%= link_to "#{record.prefecture[:name]}", record_path(record.id) %> 
+  <% end %>
+</div>
+

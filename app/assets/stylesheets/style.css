@@ -1,0 +1,190 @@
+/* リセットCSS */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+ul {
+    list-style:none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+}
+ins {
+    background-color:#fff;
+    color:#000;
+    text-decoration:none;
+}
+mark {
+    background-color:#fff;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+input, select {
+    vertical-align:middle;
+}
+
+
+
+/* ヘッダー */
+
+.header {
+  background-color: #f1f8fe;
+  padding: 20px 20px;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo{
+  font-size: 30px;
+}
+
+.nav__btn{
+  display: inline-block;
+  padding: 4px 6px;
+  font-size: 18px;
+  color: black;
+  margin-right: 10px;
+}
+.nav__btn:hover{
+  background: grey;
+}
+
+.nav__logout{
+  display: inline-block;
+  padding: 4px 6px;
+  font-size: 18px;
+  color: black;
+}
+
+.nav__logout:hover{
+  opacity: 0.5;
+}
+
+
+/* ログイン画面 */
+.login-main{
+  height: 500px;
+  width: 100%;
+}
+
+.form-label{
+  font-size: 20px;
+  display: block;
+  margin: 5px 0 5px 0;
+}
+
+.field{
+  width:800px;
+  margin: 0 auto;
+}
+
+.actions{
+  width:400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 7px;
+}
+
+.input-form{
+  height: 30px;
+  width: 800px;
+  display: block;
+  /*margin-bottom: 15px;*/
+}
+
+
+/* 投稿画面 */
+
+.record-text{
+  height: 250px;
+  width: 800px;
+}
+
+/* マイページ */
+.record-lists{
+  display: flex;
+}
+
+.record{
+  width: 100%;
+}
+
+.record-list{
+  display: flex;
+}
+
+
+/* フッター */
+
+.footer {
+  background-color: #999;
+  padding: 10px 0;
+  margin-top: 30px;
+}
+.copyright {
+  text-align: center;
+  color: #fff;
+  font-size: 10px;
+}
