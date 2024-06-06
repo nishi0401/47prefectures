@@ -1,9 +1,10 @@
-<%= form_with model: @record, local: true do |f| %>
+<div class="main-container">  
+  <%= form_with model: @record, local: true do |f| %>
     <%= render "devise/shared/error_messages", model: f.object %>
 
     <div class="field">
       <%= f.label :prefecture_id, '都道府県', class: "form-label" %>
-    <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {include_blank: "---"}, {class:"select-box", id:"item-prefecture"}) %>
+      <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {include_blank: "---"}, {class:"select-box", id:"item-prefecture"}) %>
     </div>
 
     <div class="field">
@@ -19,4 +20,5 @@
     <div class="actions">
       <%= f.submit "保存" %>
     </div>
-<% end %>
+  <% end %>
+</div>

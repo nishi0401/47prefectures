@@ -85,8 +85,8 @@ input, select {
 /* ヘッダー */
 
 .header {
-  background-color: #f1f8fe;
-  padding: 20px 20px;
+  background-color: #dcdcdc;
+  padding: 15px 20px;
 }
 
 .nav {
@@ -96,14 +96,15 @@ input, select {
 }
 
 .logo{
-  font-size: 30px;
+  font-size: 25px;
+  color: #333333;
 }
 
 .nav__btn{
   display: inline-block;
   padding: 4px 6px;
-  font-size: 18px;
-  color: black;
+  font-size: 14px;
+  color: #333333;
   margin-right: 10px;
 }
 .nav__btn:hover{
@@ -113,13 +114,59 @@ input, select {
 .nav__logout{
   display: inline-block;
   padding: 4px 6px;
-  font-size: 18px;
-  color: black;
+  font-size: 14px;
+  color: #333333;
 }
 
 .nav__logout:hover{
   opacity: 0.5;
 }
+
+/* トップページ */
+.main-container{
+  width: 100%;
+  background-color: #f2f8f8;
+  padding: 40px 0 60px 0;
+}
+
+.swiper{
+  width: 80%;
+  margin: 0 auto;
+  background-color: #000;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 400px;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 50px auto 0;
+}
+
+.button-container{
+  width: 150px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.destination-button{
+  color: #333333;
+}
+
+.record-button{
+  color: #333333;
+}
+
+
+
 
 
 /* ログイン画面 */
@@ -163,28 +210,19 @@ input, select {
 }
 
 /* マイページ */
-.record-lists{
-  display: flex;
-}
 
-.record{
-  width: 100%;
-}
 
-.record-list{
-  display: flex;
-}
+
 
 
 /* フッター */
 
 .footer {
-  background-color: #999;
+  background-color: #dcdcdc;
   padding: 10px 0;
-  margin-top: 30px;
 }
 .copyright {
   text-align: center;
-  color: #fff;
+  color: #333333;
   font-size: 10px;
 }
