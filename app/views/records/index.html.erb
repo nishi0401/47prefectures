@@ -1,6 +1,67 @@
-<script src="sightseeing.js"></script>
+<div class="main-container">  
+  <div class="container">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        
+        <div class="swiper-slide">
+          <%= image_tag asset_path('hakodate.jpg'), alt: '' %>
+        </div>
+        
+        <div class="swiper-slide">
+          <%= image_tag asset_path('kanazawa.jpg'), alt: '' %>
+        </div>
 
-<% if user_signed_in? %>
-  <%= link_to "記録する", new_record_path, class: "record-button" %>
-<% end %>
+        <div class="swiper-slide">
+          <%= image_tag asset_path('oomagari.jpg'), alt: '' %>
+        </div>
+
+        <div class="swiper-slide">
+          <%= image_tag asset_path('skytree.jpg'), alt: '' %>
+        </div>
+
+        <div class="swiper-slide">
+          <%= image_tag asset_path('okinawa.jpg'), alt: '' %>
+        </div>      
+        
+      </div>
+      <!-- ページネーション -->
+      <div class="swiper-pagination"></div>
+      <!-- 前後の矢印 -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <script>
+      const swiper = new Swiper(".swiper", {
+      loop: true, // ループ
+      speed: 3000, // 少しゆっくり(デフォルトは300)
+      autoplay: { // 自動再生
+        delay: 1000, // 1秒後に次のスライド
+        disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
+      },
+      // ページネーション
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      // 前後の矢印
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    </script>
+  </div>
+
+  <% if user_signed_in? %>
+    <div class="buttons">
+      <div class="button-container" >
+        <div><%= link_to "行き先を決める", user_destinations_path(current_user.id), class: "destination-button" %></div>
+      </div>
+      <div class="button-container" >
+        <div><%= link_to "記録する", new_record_path, class: "record-button" %></div>
+      </div>
+    </div>
+  <% end %>
+</div>  
 
