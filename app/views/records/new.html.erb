@@ -1,6 +1,6 @@
 <div class="main-container">
   <%= form_with model: @record, local: true do |f| %>
-      <%= render "devise/shared/error_messages", model: f.object %>
+      <%= render "devise/registrations/error_message", model: f.object %>
 
       <div class="field">
         <%= f.label :prefecture_id, '都道府県', class: "form-label" %>

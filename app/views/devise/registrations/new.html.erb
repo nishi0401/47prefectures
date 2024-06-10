@@ -1,34 +1,37 @@
-<div class="login-main">
-  <div class="">新規登録</div>
+<div class="main-container">
+  <div class="title">新規登録</div>
 
   <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
-    <%= render "devise/shared/error_messages", model: f.object %>
+    <%= render "devise/registrations/error_message", model: f.object %>
 
     <div class="field">
-      <%= f.label :nickname, 'ニックネーム', class: "form-label" %><br />
-      <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname", class: "input-form" %>
+      <%= f.label :nickname, 'ニックネーム', class: "registration-form-label" %><br />
+      <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname", class: "registration-input-form" %>
     </div>
 
     <div class="field">
-      <%= f.label :email, 'メールアドレス', class: "form-label" %><br />
-      <%= f.email_field :email, autocomplete: "email", class: "input-form" %>
+      <%= f.label :email, 'メールアドレス', class: "registration-form-label" %><br />
+      <%= f.email_field :email, autocomplete: "email", class: "registration-input-form" %>
     </div>
 
     <div class="field">
-      <%= f.label :password, 'パスワード', class: "form-label" %>
-      <%= f.password_field :password, autocomplete: "new-password", class: "input-form" %>
+      <%= f.label :password, 'パスワード', class: "registration-password-form-label" %>
+      <%= f.password_field :password, autocomplete: "new-password", class: "registration-input-form" %>
     </div>
 
     <div class="field">
-      <%= f.label :password_confirmation, '確認用パスワード', class: "form-label" %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input-form" %>
+      <%= f.label :password_confirmation, '確認用パスワード', class: "registration-form-label" %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "registration-input-form" %>
     </div>
 
-    <div class="actions">
-      <%= f.submit "Sign up" %>
+    <div class="registration-actions">
+      <%= f.submit "登録" %>
     </div>
   <% end %>
+  <div class="registration-link">
+    <%= render "devise/shared/links" %>
+  </div>
 </div>
 
 
-<%= render "devise/shared/links" %>
+

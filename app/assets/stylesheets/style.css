@@ -165,42 +165,83 @@ input, select {
   color: #333333;
 }
 
+/* 新規登録画面 */
+.registration-link{
+  text-align: center;
+}
 
+.registration-form-label{
+  display: block;
+  font-size: 20px;
+}
+
+.registration-password-form-label{
+  display: block;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.registration-input-form{
+  margin-bottom: 25px; 
+  height: 30px;
+  width: 500px;
+}
+
+.registration-actions{
+  margin: 10px 0 20px 0;
+  text-align: center;
+}
 
 
 
 /* ログイン画面 */
-.login-main{
-  height: 500px;
-  width: 100%;
+
+.title{
+  font-size: 50px;
+  text-align: center;
+  padding: 40px 0 40px 0;
+}
+
+.email-form{
+  height: 30px;
+  width: 500px;
+  margin-bottom: 20px; 
 }
 
 .form-label{
   font-size: 20px;
   display: block;
-  margin: 5px 0 5px 0;
+  margin: 10px 0 5px 0;
 }
 
 .field{
-  width:800px;
+  width:500px;
   margin: 0 auto;
 }
 
 .actions{
-  width:400px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  margin-top: 7px;
+  margin-top: 30px;
+  padding-bottom: 30px;
 }
 
 .input-form{
   height: 30px;
-  width: 800px;
-  display: block;
+  width: 500px;
   /*margin-bottom: 15px;*/
 }
 
+.devise-link-container{
+  width: 450px;
+  height:50px;
+  margin:0 auto;
+}
+
+.devise-link{
+  text-align: center;
+}
 
 /* 投稿画面 */
 
