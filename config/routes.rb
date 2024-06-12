@@ -5,4 +5,8 @@ Rails.application.routes.draw do
     resources :destinations, only: [:index]
   end
   root to: "records#index"
+
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
 end
