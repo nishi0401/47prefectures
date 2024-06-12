@@ -42,4 +42,27 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.0]
     # add_index :users, :confirmation_token,   unique: true
     # add_index :users, :unlock_token,         unique: true
   end
+
+  def self.down
+    change_table :users do |t|
+      # Database authenticatable
+      t.remove :email, :encrypted_password
+
+      # Recoverable
+      t.remove :reset_password_token, :reset_password_sent_at
+
+      # Rememberable
+      t.remove :remember_created_at
+
+      # Trackable
+      # 以下のコメントアウトされたカラムは、もしself.upで有効にしたならば削除する
+      # t.remove :sign_in_count, :current_sign_in_at, :last_sign_in_at, :current_sign_in_ip, :last_sign_in_ip
+
+      # Confirmable
+      # t.remove :confirmation_token, :confirmed_at, :confirmation_sent_at, :unconfirmed_email
+
+      # Lockable
+      # t.remove :failed_attempts, :unlock_token, :locked_at
+    end
+  end
 end
