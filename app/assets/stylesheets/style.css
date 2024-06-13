@@ -254,6 +254,24 @@ input, select {
 
 
 
+/* パスワード再設定画面 */
+.resetting{
+  width:500px;
+  margin: 0 auto;
+}
+
+.resetting-email{
+  font-size: 20px;
+  display: block;
+  margin: 10px 0 20px 0;
+}
+
+.resetting-email-form{
+  height: 30px;
+  width: 500px;
+  margin-bottom: 10px; 
+}
+
 
 
 /* フッター */
