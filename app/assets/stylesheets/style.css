@@ -273,6 +273,20 @@ input, select {
 }
 
 
+/* パスワード変更画面 */
+
+.new-password-form{
+  height: 30px;
+  width: 500px;
+  margin-bottom: 20px; 
+}
+
+.password-confirmation-form{
+  height: 30px;
+  width: 500px;
+}
+
+
 
 /* フッター */
 
