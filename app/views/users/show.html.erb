@@ -1,11 +1,18 @@
 <div class="main-container">
-  <%= "#{@user.nickname}さんの制覇率は#{@achievement_rate}%です" %>
-
-  <div class="records">
-    <div>旅の思い出</div>
-    <% @records.each do |record| %>
-      <%= link_to "#{record.prefecture[:name]}", record_path(record.id) %> 
-    <% end %>
+  <div class="title">マイページ</div>
+  <div class="achievement">
+  <%= "#{@user.nickname}さんの制覇率は#{@achievement_rate}%です！" %>
   </div>
+
+  <div class="record-container" >
+    <% if @records.present?%>
+      <div class="records">旅の思い出</div>
+        <div class="record">    
+          <% @records.each do |record| %>
+            <%= link_to "#{record.prefecture[:name]}", record_path(record.id) %> 
+          <% end %>
+        </div>
+    <% end %>
+  </div>  
 </div>
 

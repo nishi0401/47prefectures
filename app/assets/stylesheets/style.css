@@ -140,6 +140,20 @@ input, select {
   height: 400px;
 }
 
+.description-container{
+  width: 80%;
+  height: 50px;
+  margin: 15px auto 15px auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description{
+  font-size: 20px;
+}
+
 .buttons{
   display: flex;
   justify-content: space-around;
@@ -151,7 +165,7 @@ input, select {
   width: 150px;
   height: 70px;
   border-radius: 10px;
-  background-color: grey;
+  background-color: #32CD32;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -245,6 +259,17 @@ input, select {
 
 /* 投稿画面 */
 
+.new-record-container{
+  width: 800px;
+  margin: 0 auto;
+}
+
+.new-record-label{
+  font-size: 20px;
+  display: block;
+  margin: 10px 0 5px 0;
+}
+
 .record-text{
   height: 250px;
   width: 800px;
@@ -252,6 +277,34 @@ input, select {
 
 /* マイページ */
 
+.achievement{
+  font-size: 20px;
+  text-align: center;
+  margin-top: 30px;
+  height: 60px;
+}
+
+.record-container{
+  width: 800px;
+  height: 150px;
+  background-color: #32CD32;
+  border-radius: 15px;
+  margin: 15px auto;
+  padding-top: 20px;
+}
+
+.records{
+  font-size: 30px;
+  text-align: center;
+}
+
+.record{
+  width: 60%;
+  margin: 30px auto;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 3px;
+}
 
 
 /* パスワード再設定画面 */
