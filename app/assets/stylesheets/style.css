@@ -306,6 +306,13 @@ input, select {
   letter-spacing: 3px;
 }
 
+/* 行き先決定画面 */
+.destination{
+  font-size: 30px;
+  margin-top: 30px;
+  text-align: center;
+}
+
 
 /* パスワード再設定画面 */
 .resetting{
