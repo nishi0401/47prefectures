@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= javascript_importmap_tags %>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <% javascript_importmap_tags %>
+    <%= javascript_include_tag "turbo", type: "module" %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
 
@@ -16,6 +17,7 @@
       <div class="inner">
         <div class="nav">
           <div class="nav__left">
+            <%# image_tag '日本地図のアイコン (1).jpeg'%> 
             <%= link_to '47prefectures', root_path, class: :logo %>
           </div>
           <%# ログインしているときは以下を表示するようにしましょう %>
