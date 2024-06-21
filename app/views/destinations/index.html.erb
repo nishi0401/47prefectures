@@ -2,4 +2,7 @@
   <div class="destination" >
   <%= "#{@user.nickname}さんの次の旅先は#{@random_data.name}です" %>
   </div>
+  <div class="destination-image">
+  <%= image_tag "#{@attraction.photo}", class: 'attraction' %>
+  </div>
 </div>
