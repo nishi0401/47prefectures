@@ -327,6 +327,11 @@ input, select {
   background-color: #32CD32;
 }
 
+.attraction_name{
+  text-align: right;
+  width: 90%;
+}
+
 /* パスワード再設定画面 */
 .resetting{
   width:500px;

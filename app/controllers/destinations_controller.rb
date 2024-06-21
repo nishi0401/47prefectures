@@ -9,5 +9,6 @@ class DestinationsController < ApplicationController
     random_number = remaining_numbers.sample
     @random_data = Prefecture.find(random_number)
     @attraction = Attraction.find(random_number)
+    @attraction_name = AttractionName.find(random_number)
   end
 end
