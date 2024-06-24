@@ -120,7 +120,7 @@ input, select {
 }
 
 .nav__logout:hover{
-  opacity: 0.5;
+  background: grey;
 }
 
 /* トップページ */
@@ -260,12 +260,12 @@ input, select {
 
 /* 投稿画面 */
 
-.new-record-container{
+.record-container{
   width: 800px;
   margin: 0 auto;
 }
 
-.new-record-label{
+.record-label{
   font-size: 20px;
   display: block;
   margin: 10px 0 5px 0;
@@ -285,9 +285,9 @@ input, select {
   height: 60px;
 }
 
-.record-container{
+.records-container{
   width: 800px;
-  height: 150px;
+  height: 200px;
   background-color: #b0c4de;
   border-radius: 15px;
   margin: 15px auto;
@@ -335,8 +335,7 @@ input, select {
 
 /* 投稿詳細画面 */
 .record_container{
-  width:40%;
-  height:400px;
+  width:70%;
   border: 1px solid #333333;
   border-radius: 15px;
   margin: 0 auto;
@@ -345,12 +344,21 @@ input, select {
 
 .prefecture_name{
   font-size: 20px;
-  margin-top: 10px;
+  margin-top: 20px;
   text-align: center;
 }
 
+.record-image{
+  margin-top: 15px;
+  width: 100%;
+}
+
 .record_content{
+  width:90%;
   font-size: 15px;
+  margin: 15px auto 15px auto;
+  padding: 10px;
+  text-align: center;
 }
 
 /* パスワード再設定画面 */

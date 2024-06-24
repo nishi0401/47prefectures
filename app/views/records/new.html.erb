@@ -1,21 +1,21 @@
 <div class="main-container">
-  <div class="title">新規投稿</div>
-  <div class="new-record-container">
+  <div class="title">記録</div>
+  <div class="record-container">
   <%= form_with model: @record, local: true do |f| %>
       <%= render "devise/registrations/error_message", model: f.object %>
 
-      <div class="new-record-field">
-        <%= f.label :prefecture_id, '都道府県', class: "new-record-label" %>
+      <div class="record-field">
+        <%= f.label :prefecture_id, '都道府県', class: "record-label" %>
       <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {include_blank: "---"}, {class:"select-box", id:"item-prefecture"}) %>
       </div>
 
-      <div class="new-record-field">
-        <%= f.label :image, '画像', class: "new-record-label" %>
+      <div class="record-field">
+        <%= f.label :image, '画像', class: "record-label" %>
         <%= f.file_field :image, class: "image-form" %>
       </div>
 
-      <div class="new-record-field">
-        <%= f.label :content, '内容', class: "new-record-label" %>
+      <div class="record-field">
+        <%= f.label :content, '内容', class: "record-label" %>
         <%= f.text_area :content, autocomplete: "content", class: "record-text" %>
       </div>
 
