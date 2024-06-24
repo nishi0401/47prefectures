@@ -1,9 +1,16 @@
 <div class="main-container">
-  <div><%= @record.prefecture[:name] %></div>
-  <div><%= image_tag @record.image, width: "80%", height: "400", class: 'record-image' if @record.image.attached? %></div>
-  <div><%= @record.content %></div>
-    <% if current_user.id = @record.user.id %>
-    <%= link_to "編集", edit_record_path(@record.id) %>
-    <%= link_to "削除", record_path(@record.id), data: {turbo_method: :delete} %>
-  <% end %>
+  <div class="title"> 旅の記録 </div>
+    <div class="record_container">
+      <div class="prefecture_name"><%= "都道府県:#{@record.prefecture[:name]}" %></div>
+      <div><%= image_tag @record.image, width: "80%", height: "400", class: 'record-image' if @record.image.attached? %></div>
+      <div class="record_content"><%= @record.content %></div>
+  </div>
+  <div class="buttons">
+    <div class="button-container" >
+      <div><%= link_to "編集", edit_record_path(@record.id), class: "destination-button" %></div>
+    </div>
+    <div class="button-container" >
+      <div><%= link_to "削除", record_path(@record.id), data: {turbo_method: :delete} %></div>
+    </div>
+  </div>
 </div>
