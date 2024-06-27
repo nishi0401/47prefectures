@@ -1,24 +1,78 @@
-# テーブル設計
+# アプリケーション名
+47prefectures
 
-## users テーブル
+# アプリケーション概要
+47都道府県制覇を目的とした、旅行の記録アプリケーションです。
+旅行の記録だけでなく、行き先の決定、制覇率の確認などをすることができます。
 
-| Column             | Type   | Options                   |
-| ------------------ | ------ | -----------               |
-| nickname           | string | null: false               |
-| email              | string | null: false, unique: true |
-| encrypted_password | string | null: false               |
+# URL
+http://52.194.67.144
+
+# テスト用アカウント
+- メールアドレス：sample@com
+- パスワード：sample
+
+# 利用方法
+トップページのヘッダーから新規登録を行います。
+「記録する」ボタンをクリックすると、旅行の記録を新規投稿することができます。
+
+## 行き先を決める
+トップページの「行き先を決める」ボタンをクリックすると、投稿したことがない都道府県の中からランダムで1つを選択し、表示します。
+[![Image from Gyazo](https://i.gyazo.com/14e8f8b51b7de574601dc4175c783f53.gif)](https://gyazo.com/14e8f8b51b7de574601dc4175c783f53)
+
+## 制覇率を見る
+ヘッダーの「マイページ」をクリックすると、制覇率を確認することができます。
+[![Image from Gyazo](https://i.gyazo.com/f57c0daacac0520739ff2c178cc7ce8a.gif)](https://gyazo.com/f57c0daacac0520739ff2c178cc7ce8a)
 
 
-### Association
+# アプリケーションを作成した背景
+私の過去を振り返ったときに、人生でやってみたいことのひとつとして、47都道府県制覇を挙げている人が多いことに気がつきました。
 
-- has_many :records
+しかし、実際に制覇したという人や、制覇に向けて計画を立てて行動している人は少ないのではないかと考えました。
 
-## records テーブル
+やってみたいことを先延ばしにして、あとで後悔してほしくないという思いから、47都道府県制覇に向けた行動を促すことはできないかと思い、このアプリケーションを作成することにしました。
 
-| Column                | Type        | Options                        |
-| ------------------    | ------      | -----------                    |
-| content               | text        | null: false                    |
-| prefecture_id         | integer     | null: false                    |
-| user                  | references  | null: false, foreign_key: true |
+# 実装した機能
+- ユーザー管理(devise)
+- パスワード再設定
+- メモ投稿
+- メモ一覧表示
+- メモ詳細表示
+- メモ編集
+- メモ削除
+- スライドショー(Swiper)
+- 制覇率表示
+- 行き先の決定、表示
 
-- belongs_to :user
+# 実装予定の機能
+今後はメモを一括で投稿できる機能や、旅行の予定を立てる機能などを実装したいと考えています。
+
+# データベース設計
+[![Image from Gyazo](https://i.gyazo.com/0e860503aa94ae605fd9f953b41ecddc.png)](https://gyazo.com/0e860503aa94ae605fd9f953b41ecddc)
+
+# 画面遷移図
+[![Image from Gyazo](https://i.gyazo.com/db22ec3e0caf867fd2b619a8fad232b2.png)](https://gyazo.com/db22ec3e0caf867fd2b619a8fad232b2)
+
+# 開発環境
+- JavaScript
+- Ruby 3.2.0
+- Ruby on Rails 7.0.8.3
+- MySQL 5.7.44
+- Nginx
+- Unicorn
+- AWS
+  - VPC
+  - EC2
+- capistrano 3.18.1
+
+# 工夫したポイント
+現在どれくらいの都道府県に行くことができたのかをわかりやすく表現するために、数値で表すことが重要だと考え、制覇率の表示を実装しました。
+
+この場所に行ってみたいと思ってもらうために、写真の選定にこだわり、スライドショーを実装しました。
+
+# 改善点
+UIを改善していきたいと考えています。
+具体的には、CSSフレームワークの活用、フォントの変更などを行う予定です。
+
+# 制作時間
+約3週間
