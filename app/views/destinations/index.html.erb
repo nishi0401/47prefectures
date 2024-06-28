@@ -1,11 +1,15 @@
 <div class="main-container">
   <div class="destination" >
-  <%= "#{@user.nickname}さんの次の旅先は#{@random_data.name}です" %>
-  </div>
-  <div class="destination-image">
-  <%= image_tag "#{@attraction.photo}", class: 'attraction' %>
-  </div>
-  <div class="attraction_name"> 
-  <%= "(#{@attraction_name.name})" %>
+    <% if @random_data == nil%> 
+      <%= "あなたは全都道府県を制覇しました！おめでとうございます！" %>
+    <% else %>
+      <%= "#{@user.nickname}さんの次の旅先は#{@random_data.name}です" %>
+      </div>
+      <div class="destination-image">
+      <%= image_tag "#{@attraction.photo}", class: 'attraction' %>
+      </div>
+      <div class="attraction_name"> 
+      <%= "(#{@attraction_name.name})" %>
+    <% end %>  
   </div>
 </div>

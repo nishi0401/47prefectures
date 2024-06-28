@@ -6,9 +6,13 @@ class DestinationsController < ApplicationController
     prefectures = records.pluck(:prefecture_id)
     all_numbers = (1..47).to_a
     remaining_numbers = all_numbers - prefectures
-    random_number = remaining_numbers.sample
-    @random_data = Prefecture.find(random_number)
-    @attraction = Attraction.find(random_number)
-    @attraction_name = AttractionName.find(random_number)
+    if remaining_numbers.empty?
+      return
+    else
+      random_number = remaining_numbers.sample
+      @random_data = Prefecture.find(random_number)
+      @attraction = Attraction.find(random_number)
+      @attraction_name = AttractionName.find(random_number)
+    end
   end
 end
