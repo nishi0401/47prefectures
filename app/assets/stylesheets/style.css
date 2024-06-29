@@ -138,7 +138,8 @@ input, select {
 
 .swiper-slide img {
   width: 100%;
-  height: 400px;
+  height: 500px;
+  object-fit: cover;
 }
 
 .description-container{
@@ -287,7 +288,6 @@ input, select {
 
 .records-container{
   width: 800px;
-  height: 200px;
   background-color: #b0c4de;
   border-radius: 15px;
   margin: 15px auto;
@@ -302,6 +302,7 @@ input, select {
 .record{
   width: 60%;
   margin: 30px auto;
+  padding-bottom: 20px;
   font-size: 15px;
   line-height: 25px;
   letter-spacing: 3px;
@@ -316,7 +317,6 @@ input, select {
 
 .destination-image{
   width: 80%;
-  height: 400px;
   margin: 30px auto 0 auto;
   background-color: #333333;
 }
@@ -324,8 +324,8 @@ input, select {
 
 .attraction{
   width: 100%;
-  height: 400px;
-  background-color: #b0c4de;
+  height: 500px;
+  object-fit: cover;
 }
 
 .attraction_name{
@@ -336,8 +336,8 @@ input, select {
 /* 投稿詳細画面 */
 .record_container{
   width:70%;
-  border: 1px solid #333333;
   border-radius: 15px;
+  padding: 15px 0;
   margin: 0 auto;
   background-color: #b0c4de;
 }
