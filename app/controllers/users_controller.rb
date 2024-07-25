@@ -13,12 +13,4 @@ class UsersController < ApplicationController
     end
   end
 
-  private
-
-  def move_to_new_user_session
-    return if user_signed_in?
-
-    redirect_to new_user_session_path
-  end
-
 end

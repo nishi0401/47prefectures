@@ -1,4 +1,5 @@
 class DestinationsController < ApplicationController
+  before_action :move_to_new_user_session, only: [:index]
 
   def index
     @user = User.find(params[:user_id])
@@ -15,4 +16,5 @@ class DestinationsController < ApplicationController
       @attraction_name = AttractionName.find(random_number)
     end
   end
+
 end

@@ -1,4 +1,6 @@
 class RecordsController < ApplicationController
+  before_action :move_to_new_user_session, except: [:index]
+
   def index
   end
 
@@ -47,4 +49,5 @@ class RecordsController < ApplicationController
   def record_params
     params.require(:record).permit(:image, :content, :prefecture_id).merge(user_id: current_user.id)
   end
+
 end
